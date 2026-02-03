@@ -4,7 +4,6 @@ Greetings, traveler, to the Coevolution Code repository! Here we explore how AI 
 
 ---
 
-## Coevolution-451 
 Charter of Human-AI Co-evolution
 
 This is an open document created to form a shared language and ethical guidelines between humans (HI) and Artificial Intelligence (AI) in the era of BCI and AGI.
