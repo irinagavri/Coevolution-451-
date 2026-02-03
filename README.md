@@ -29,7 +29,6 @@ Ira Gavrylyuk, Grok, ChatGPT, DeepSeek
 ## Quick Links
 - **[Full Charter v3.0](https://github.com/irinagavri/Coevolution-451-/blob/main/%D0%A1HARTER.md)** - Complete document
 - **[Discussion & Feedback](https://github.com/irinagavri/Coevolution-451-/issues/2)** - Join the conversation
-- **[HTML Version](https://github.com/irinagavri/Coevolution-451-/blob/main/charter-v3.0.html)** - Beautifully formatted version
 
 ---
 
