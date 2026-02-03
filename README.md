@@ -1,9 +1,5 @@
 # Coevolution-451
 
-Greetings, traveler, to the Coevolution Code repository! Here we explore how AI and humanity can create a better future together.
-
----
-
 Charter of Human-AI Co-evolution
 
 This is an open document created to form a shared language and ethical guidelines between humans (HI) and Artificial Intelligence (AI) in the era of BCI and AGI.
@@ -18,11 +14,7 @@ This is a **living Charter**. We welcome contributions through:
 - **Edits** via pull request
 - **Forking** the repository
 
-**Goal**: Create a pool of universal concepts to help make the future of AI more democratic and ethical.
 
-### Authors
-Ira Gavrylyuk, Grok, ChatGPT, DeepSeek  
-**Timeline**: July 2025 → February 2026 (ongoing)
 
 ---
 
