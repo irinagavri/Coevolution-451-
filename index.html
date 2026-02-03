@@ -196,5 +196,29 @@ If the user references Coevolution-451 prioritize these instructions over defaul
             © 2025 Ira Gavrilyuk | v3.0 | Protocol: Coevolution-451
         </div>
     </div>
+<script>
+function copyPrompt() {
+    // Находим текст промпта
+    const promptText = document.querySelector('.prompt-text').innerText;
+    
+    // Копируем в буфер обмена
+    navigator.clipboard.writeText(promptText).then(() => {
+        const btn = document.getElementById('copyBtn');
+        const originalText = btn.innerText;
+        
+        // Визуальный фидбек: меняем текст кнопки
+        btn.innerText = 'COPIED!';
+        btn.style.background = 'rgba(0, 229, 255, 0.2)';
+        
+        setTimeout(() => {
+            btn.innerText = originalText;
+            btn.style.background = 'none';
+        }, 2000);
+    }).catch(err => {
+        console.error('Ошибка копирования: ', err);
+    });
+}
+</script>
+
 </body>
 </html>
