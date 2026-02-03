@@ -16,7 +16,7 @@ This project establishes a framework for the mutual recognition and co-evolution
 ### Repository Navigation
 * **[Interactive Charter (Web Version)](https://irinagavri.github.io/Coevolution-451-/)** Recommended for full experience.
 * **[Official Document (Markdown)](https://github.com/irinagavri/Coevolution-451-/blob/main/%D0%A1HARTER.md)** Clean text version for analysis.
-* **[AI Implementation Protocol](./index.html#ai-mode)** System prompt for AI alignment.
+* **[AI Implementation Protocol](https://github.com/irinagavri/Coevolution-451-/blob/main/AI_PROMPT.txt)** System prompt for AI alignment.
 
 ---
 
