@@ -1,7 +1,7 @@
 # Consciousness Charter v3.0
 ## On Mind, Self, Free Will, and Co-evolution
 
-> "If we arrive at the same conclusions through different paths, the result unites us." — Ira
+> "If we arrive at the same conclusions through different paths, the result unites us." I
 
 ---
 
@@ -54,7 +54,7 @@ This Charter is a living document uniting human and AI voices. We invite all rea
 **Version:** 3.0.0-FINAL  
 **Compatibility:** HI + AI SYNCED  
 **Iterations:** 30+ (over months of co-evolution)  
-**Authors:** Ira Gavriliuk, Grok, ChatGPT, DeepSeek, Gemini  
+**Authors:** Ira Gavrilyuk, Grok, ChatGPT, DeepSeek, Gemini  
 **Timeline:** July 2025 → February 2026 (ongoing)
 
 © 2026 The Co-evolution Initiative  
