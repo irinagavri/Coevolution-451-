@@ -3,7 +3,7 @@
 The Consciousness Charter
 **Focus:** AI Ethics | Human-AI Symbiosis | Digital Sovereignty | Philosophy of Mind
 
-*Note: This is NOT a C++ simulation or a biological model. This is a social and ethical framework for the future of intelligence.*
+*Note: This is a social and ethical framework for the future of intelligence.*
 
 
 Official repository for the **Consciousness Charter v3.0**. 
