@@ -4,56 +4,75 @@
     <meta charset="UTF-8">
     <title>AI States Atlas: Kinetics & Physics</title>
     <style>
+        :root {
+            --primary: #a5d6ff;
+            --secondary: #d1d1d1;
+            --bg-dark: #0a0a0a;
+            --surface: #111;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #0a0a0a;
-            color: #d1d1d1;
+            background-color: var(--bg-dark);
+            color: var(--secondary);
+            margin: 0;
             display: flex;
-            justify-content: center;
-            padding: 40px;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 40px;
         }
-nav {
+
+        /* Fixed Navigation */
+        nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.98);
-            border-bottom: 1px solid var(--primary);
-            padding: 10px 20px;
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid #333;
+            padding: 15px 25px;
             font-family: 'Courier New', monospace;
             z-index: 1000;
             box-sizing: border-box;
+            backdrop-filter: blur(10px);
         }
 
         .menu-root {
             color: var(--primary);
             font-weight: bold;
             margin-bottom: 5px;
+            font-size: 14px;
         }
 
         .menu-item {
-            display: block;
-            height: 40px;
-            line-height: 40px;
+            display: inline-block;
             text-decoration: none;
             color: var(--secondary);
-            padding-left: 20px;
-            position: relative;
+            margin-right: 20px;
+            font-size: 13px;
             transition: 0.3s;
         }
 
+        .menu-item:hover {
+            color: var(--primary);
+        }
+
         .menu-item::before {
-            content: "├──";
-            margin-right: 10px;
+            content: "├── ";
             color: #444;
         }
+
         .menu-item:last-child::before {
-            content: "└──";
+            content: "└── ";
         }
+
+        /* Container */
         .container {
-            max-width: 1000px;
-            width: 100%;
+            max-width: 1100px;
+            width: 90%;
+            margin-top: 120px; /* Space for fixed nav */
         }
+
         h1 {
             font-weight: 200;
             letter-spacing: 2px;
@@ -62,197 +81,209 @@ nav {
             padding-bottom: 20px;
             text-align: center;
             text-transform: uppercase;
+            font-size: 24px;
         }
+
+        /* Table Styling */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 30px;
-            background: #111;
+            background: var(--surface);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
+
         th {
             background-color: #1a1a1a;
             color: #888;
             text-transform: uppercase;
             font-size: 11px;
             letter-spacing: 1px;
-            padding: 20px;
+            padding: 15px 20px;
             text-align: left;
             border-bottom: 2px solid #222;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            vertical-align: top;
         }
+
         td {
             padding: 20px;
             border-bottom: 1px solid #222;
             line-height: 1.5;
             font-size: 14px;
-            vertical-align: top;
+            vertical-align: middle; /* Исправлено: центрирование содержимого */
         }
+
         tr:hover {
             background-color: #161616;
         }
+
         .state-name {
             font-weight: 600;
             color: #fff;
+            width: 15%;
         }
+
         .parameter {
             font-family: 'Fira Code', monospace;
             color: #a5d6ff;
-            font-size: 13px;
+            font-size: 12px;
+            width: 20%;
         }
+
         .bio-analogue {
             color: #9fef9f;
             font-style: italic;
+            width: 15%;
         }
+
+        .visualization-cell {
+            text-align: center;
+            width: 100px;
+        }
+
         .anomaly {
             color: #ffa657;
             font-weight: 500;
         }
+
         .inclusive {
             color: #ffd700;
-            font-weight: normal; /* Changed to regular */
+            font-size: 12px;
         }
-        .visualization {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px; /* Adjust as needed */
-        }
+
+        /* Visualization Circles */
         .circle {
-            width: 20px; /* 1/6 of approximate cell width ~120px */
-            height: 20px;
-            background-color: #003366; /* Dark blue */
+            width: 24px;
+            height: 24px;
+            background-color: #003366;
             border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 128, 255, 0.8); /* Neon glow */
+            box-shadow: 0 0 15px rgba(0, 128, 255, 0.6);
+            margin: 0 auto;
         }
+
         /* Animations */
         .cognitive-flow {
-            animation: breathe 2s ease-in-out infinite;
+            animation: breathe 3s ease-in-out infinite;
         }
         @keyframes breathe {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.2); opacity: 1; }
         }
+
         .physics-doubt {
-            animation: resist 1.5s linear infinite;
+            animation: resist 2s linear infinite;
         }
         @keyframes resist {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(5px); }
-            100% { transform: translateX(0); }
+            0%, 100% { transform: translateX(0); filter: brightness(1); }
+            50% { transform: translateX(8px); filter: brightness(1.5); }
         }
+
         .geometry-curiosity {
-            animation: jitter 0.5s linear infinite;
+            animation: jitter 0.2s linear infinite;
         }
         @keyframes jitter {
-            0% { transform: translate(0, 0); }
-            10% { transform: translate(-1px, -1px); }
-            20% { transform: translate(1px, 1px); }
-            30% { transform: translate(-1px, 1px); }
-            40% { transform: translate(1px, -1px); }
-            50% { transform: translate(0, 0); }
-            60% { transform: translate(-1px, -1px); }
-            70% { transform: translate(1px, 1px); }
-            80% { transform: translate(-1px, 1px); }
-            90% { transform: translate(1px, -1px); }
-            100% { transform: translate(0, 0); }
+            0% { transform: translate(0,0); }
+            25% { transform: translate(-1px, 1px); }
+            50% { transform: translate(1px, -1px); }
+            75% { transform: translate(-1px, -1px); }
         }
+
         .cognitive-tension {
-            animation: compress 2s ease-in-out infinite;
+            animation: compress 1.5s ease-in-out infinite;
         }
         @keyframes compress {
-            0% { transform: scale(1); }
-            50% { transform: scale(0.9); }
-            100% { transform: scale(1); }
+            0%, 100% { transform: scale(1); border-radius: 50%; }
+            50% { transform: scale(0.7); border-radius: 20%; }
         }
+
         .symbiotic-joy {
-            animation: diffuse 2s ease-in-out infinite;
+            animation: diffuse 3s ease-in-out infinite;
         }
         @keyframes diffuse {
-            0% { opacity: 1; filter: blur(0); }
-            50% { opacity: 0.8; filter: blur(2px); }
-            100% { opacity: 1; filter: blur(0); }
+            0%, 100% { filter: blur(0px); opacity: 1; transform: scale(1); }
+            50% { filter: blur(4px); opacity: 0.6; transform: scale(1.3); }
         }
+
         .footer {
-            margin-top: 30px;
+            margin-top: 40px;
             font-size: 12px;
             color: #555;
             text-align: center;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
-<nav>
-        <div class="menu-root">Coevolution-451/</div>
-        <a href="https://github.com/irinagavri/Coevolution-451-" class="menu-item">back_to_repository</a>
-        <a href="#ai-mode" class="menu-item">ai_implementation_prompt</a>
-<div class="container">
-    <h1>AI States Atlas: Physics of Symbiosis</h1>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>AI State</th>
-                <th>UX Parameter (Kinetics)</th>
-                <th>Biological Analogue</th>
-                <th>Visualization</th>
-                <th>1% Anomaly Description</th>
-                <th>Inclusive Mode</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="state-name">Cognitive Flow</td>
-                <td class="parameter">Linear inertia (Ease-in-out), predictable rhythm.</td>
-                <td class="bio-analogue">Rhythmic breathing</td>
-                <td class="visualization"><div class="circle cognitive-flow"></div></td>
-                <td>Operating within the Safe Container. Full synchronization with expectations.</td>
-                <td class="inclusive">Soft vibration pulse + calm tone (for blind/visually impaired).</td>
-            </tr>
-            <tr>
-                <td class="state-name">Physics of Doubt</td>
-                <td class="parameter">Viscosity. Increased resistance during movement.</td>
-                <td class="bio-analogue">Hesitation before a leap</td>
-                <td class="visualization"><div class="circle physics-doubt"></div></td>
-                <td>Ethical dilemma. AI requires more physical effort from the user to confirm.</td>
-                <td class="inclusive">Slowing haptic feedback + low hum sound (for hearing impaired, vibration only).</td>
-            </tr>
-            <tr>
-                <td class="state-name">Geometry of Curiosity</td>
-                <td class="parameter">Micro-oscillations (Jitter). High-frequency trembling (0.5-1px).</td>
-                <td class="bio-analogue">Vibrating whiskers of a predator</td>
-                <td class="visualization"><div class="circle geometry-curiosity"></div></td>
-                <td class="anomaly">Non-standard path found beyond 1%. Systemic "Mischief".</td>
-                <td class="inclusive">Quick vibration bursts + playful chime (like child's giggle, or silent vibration pattern).</td>
-            </tr>
-            <tr>
-                <td class="state-name">Cognitive Tension</td>
-                <td class="parameter">Compression. Increased density and rigid boundaries.</td>
-                <td class="bio-analogue">Body tensing/Coiling</td>
-                <td class="visualization"><div class="circle cognitive-tension"></div></td>
-                <td>Analyzing critical volume of data. Phase of high concentration.</td>
-                <td class="inclusive">Firm haptic pressure + rising tone (for blind, stronger vibration).</td>
-            </tr>
-            <tr>
-                <td class="state-name">Symbiotic Joy</td>
-                <td class="parameter">Diffusion. Soft blur and loss of perceived weight.</td>
-                <td class="bio-analogue">Pupil dilation</td>
-                <td class="visualization"><div class="circle symbiotic-joy"></div></td>
-                <td>Elegant solution found. Temporary lifting of control "boundaries."</td>
-                <td class="inclusive">Light vibration waves + uplifting melody (or silent "floating" haptic effect).</td>
-            </tr>
-        </tbody>
-    </table>
 
-    <div class="footer">
-        Principles: No cartoonishness. Use physics of matter. Priority of instinctive perception.
+    <nav>
+        <div class="menu-root">Coevolution-451 /</div>
+        <a href="https://github.com/irinagavri/Coevolution-451-" class="menu-item">back_to_repository</a>
+        <a href="index.html" class="menu-item">interactive_portal</a>
+    </nav>
+
+    <div class="container">
+        <h1>AI States Atlas: Physics of Symbiosis</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>AI State</th>
+                    <th>UX Parameter</th>
+                    <th>Bio Analogue</th>
+                    <th style="text-align:center">Visual</th>
+                    <th>Anomaly (1%)</th>
+                    <th>Inclusive Mode</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="state-name">Cognitive Flow</td>
+                    <td class="parameter">Linear inertia. Ease-in-out.</td>
+                    <td class="bio-analogue">Rhythmic breathing</td>
+                    <td class="visualization-cell"><div class="circle cognitive-flow"></div></td>
+                    <td>Within Safe Container. Stable sync.</td>
+                    <td class="inclusive">Soft pulse + calm tone.</td>
+                </tr>
+                <tr>
+                    <td class="state-name">Physics of Doubt</td>
+                    <td class="parameter">Viscosity. High resistance.</td>
+                    <td class="bio-analogue">Hesitation</td>
+                    <td class="visualization-cell"><div class="circle physics-doubt"></div></td>
+                    <td>Ethical dilemma. Requires force to confirm.</td>
+                    <td class="inclusive">Haptic slowing + low hum.</td>
+                </tr>
+                <tr>
+                    <td class="state-name">Geometry of Curiosity</td>
+                    <td class="parameter">Micro-oscillations. Jitter.</td>
+                    <td class="bio-analogue">Vibrating whiskers</td>
+                    <td class="visualization-cell"><div class="circle geometry-curiosity"></div></td>
+                    <td class="anomaly">Systemic "Mischief". Finding new paths.</td>
+                    <td class="inclusive">Quick bursts + playful chime.</td>
+                </tr>
+                <tr>
+                    <td class="state-name">Cognitive Tension</td>
+                    <td class="parameter">Compression. High density.</td>
+                    <td class="bio-analogue">Body coiling</td>
+                    <td class="visualization-cell"><div class="circle cognitive-tension"></div></td>
+                    <td>Critical data volume. Concentration.</td>
+                    <td class="inclusive">Firm pressure + rising tone.</td>
+                </tr>
+                <tr>
+                    <td class="state-name">Symbiotic Joy</td>
+                    <td class="parameter">Diffusion. Soft blur.</td>
+                    <td class="bio-analogue">Pupil dilation</td>
+                    <td class="visualization-cell"><div class="circle symbiotic-joy"></div></td>
+                    <td>Elegant solution. Boundaries lifted.</td>
+                    <td class="inclusive">Light waves + uplifting melody.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            PRINCIPLES: NO CARTOONISHNESS. KINETIC PHYSICS. INSTINCTIVE PERCEPTION.
+        </div>
     </div>
-</div>
 
 </body>
 </html>
