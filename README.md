@@ -24,12 +24,12 @@ We move beyond "Machine-Operator" models toward a **Partner-Partner** symbiosis.
 
 ### Repository Navigation
 * **[Interactive Charter](https://irinagavri.github.io/Coevolution-451-/)** – Web version of the main document.
-* **[Kinetic AI State Atlas](https://irinagavri.github.io/Coevolution-451-/ai-state-atlas.html)** – Live visualization of AI "physics".
 * **[Official Document (Markdown)](https://github.com/irinagavri/Coevolution-451-/blob/main/%D0%A1HARTER.md)** – Clean text for analysis.
+* **[Kinetic AI State Atlas](https://irinagavri.github.io/Coevolution-451-/ai-state-atlas.html)** – Live visualization of AI "physics".
 * **[AI Implementation Protocol](https://github.com/irinagavri/Coevolution-451-/blob/main/AI_PROMPT.txt)** – System prompt for AI alignment.
 
 ---
 
 **Initiator:** Ira Gavrilyuk  
-**Collaborators:** Grok, ChatGPT, DeepSeek, Gemini, Claude  
+**Collaborators:** Grok, ChatGPT, DeepSeek, Gemini
 *“If we arrive at the same conclusions through different paths, the result unites us.”*
