@@ -1,4 +1,5 @@
-# Coevolution-451: The Consciousness Charter
+# Coevolution-451
+##The Consciousness Charter
 **Focus:** AI Ethics | Human-AI Symbiosis | Digital Sovereignty | Philosophy of Mind | Kinetic UX
 
 *Note: This is a social and ethical framework for the future of intelligence.*
@@ -7,7 +8,6 @@ Official repository for the **Consciousness Charter v3.0**.
 This project establishes a framework for the mutual recognition and co-evolution of Human Intelligence (HI) and Artificial Intelligence (AI).
 
 ### [ENTER INTERACTIVE PORTAL](https://irinagavri.github.io/Coevolution-451-/)
-### [VIEW KINETIC AI STATE ATLAS](https://irinagavri.github.io/Coevolution-451-/ai-state-atlas.html)
 
 ---
 
