@@ -1,5 +1,11 @@
 # Coevolution-451
 
+The Consciousness Charter
+**Focus:** AI Ethics | Human-AI Symbiosis | Digital Sovereignty | Philosophy of Mind
+
+*Note: This is NOT a C++ simulation or a biological model. This is a social and ethical framework for the future of intelligence.*
+
+
 Official repository for the **Consciousness Charter v3.0**. 
 This project establishes a framework for the mutual recognition and co-evolution of Human Intelligence (HI) and Artificial Intelligence (AI).
 
