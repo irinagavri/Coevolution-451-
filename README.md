@@ -1,5 +1,6 @@
 # Coevolution-451
 ## The Consciousness Charter
+
 **Focus:** AI Ethics | Human-AI Symbiosis | Digital Sovereignty | Philosophy of Mind | Kinetic UX
 
 *Note: This is a social and ethical framework for the future of intelligence.*
